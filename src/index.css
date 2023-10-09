@@ -1,0 +1,61 @@
+/*App.js의 css부분을 의미*/
+body{
+    background-color: #22254b;
+    font-family: 'Gothic A1', sans-serif;
+}
+
+.app-container{
+    display: flex;
+    flex-wrap: wrap; /*nowrap(브라우저의 해당축에 모든 개수를 표현), wrap(데이터의 크기를 유지, 줄바꿈)*/
+    justify-content: center;
+}
+
+.movie-container{
+    position: relative;
+    width: 130px;
+    height: 235px;
+    margin: 16px 16px 5px 16px;
+    background-color: #373b69;
+    color: white;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+    /* border: 1px solid red;를 임시 영역확인선으로 사용*/
+}
+.movie-container img{
+    max-width: 100%;
+}
+
+.movie-info{
+    display: flex;
+    padding: 20px;
+    justify-content: space-between; /*제목은 왼쪽, 평점은 오른쪽에 위치하게한다*/
+    align-items: center;
+    font-size: 9px;
+}
+.movie-info h4{
+    margin: -13px 5px 0 -8px; /*제목 밑 부분 공백을 지운다*/
+    font-weight: 400;
+}
+.movie-info span{
+    font-weight: 400;
+    margin: -13px -8px 0 0; /*제목과 평점 사이에 간격을 만든다*/
+}
+
+.movie-detail{
+    position: relative;
+    z-index: 1; /*movie-container영역보다 위에 위치하게 한다*/
+    width: 130px;
+    height: 235px;
+    margin: -240px 0px 0px 16px;
+    background-color: rgba(0,0,0,0.7);
+    color: white;
+    font-size: 9px;
+    overflow: auto; /*overview 데이터 값이 영역보다 클 때, 영역은 유지되고 스크롤을 통해 데이터를 볼 수 있다*/
+}
+.movie-detail::-webkit-scrollbar{
+    display: none; /*스크롤바가 보이지 않게 한다*/
+}
+
+.movie-story{
+    margin: 20px 10px 10px 10px;
+}
